@@ -1,0 +1,18 @@
+Source: anomaly
+Section: utils
+Priority: extra
+Maintainer: Alejandro Garrido Mota <alejandro@debian.org>
+Build-Depends: debhelper (>= 9), cmake
+Standards-Version: 3.9.4
+Homepage: http://tasktools.org/projects/anomaly/
+Vcs-Git: git://github.com/mogaal/anomaly.git
+Vcs-Browser: https://github.com/mogaal/anomaly
+
+Package: anomaly
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: detect anomalous data in a numeric stream
+ To detect anomalous data in a numeric stream anomaly needs to see
+ a stream of numeric data, and apply one of its detection methods. 
+ If an anomaly is detected, a response is made, chosen from one or
+ more built in methods.

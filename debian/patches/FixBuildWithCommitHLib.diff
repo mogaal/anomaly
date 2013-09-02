@@ -1,0 +1,13 @@
+Description: Remove commit.h lib
+Author: Alejandro Garrido Mota <alejandro@debian.org>
+
+--- a/src/anomaly.cpp
++++ b/src/anomaly.cpp
+@@ -29,7 +29,6 @@
+ #include <string.h>
+ #include <Detector.h>
+ #include <cmake.h>
+-#include <commit.h>
+ 
+ ////////////////////////////////////////////////////////////////////////////////
+ static int usage ()

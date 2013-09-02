@@ -1,0 +1,139 @@
+Description: Manual page has hyphen instead minus sign "-"
+Author: Alejandro Garrido Mota <alejandro@debian.org>
+
+--- a/doc/man/anomaly.1.in
++++ b/doc/man/anomaly.1.in
+@@ -4,12 +4,12 @@
+ anomaly \- anomalous data detection
+ 
+ .SH SYNOPSIS
+-.B anomaly [-h|--help] [-v|--version] [-d|--details]
+-        [-t|--threshold] [--min N] [--max N]
+-        [-s|--stddev] [-n|--sample N] [-c|--coefficient N]
+-        [-q|--quiet]
+-        [-e|--execute PROGRAM]
+-        [-p|--pid PID]
++.B anomaly [\-h|\-\-help] [\-v|\-\-version] [\-d|\-\-details]
++        [\-t|\-\-threshold] [\-\-min N] [\-\-max N]
++        [\-s|\-\-stddev] [\-n|\-\-sample N] [\-c|\-\-coefficient N]
++        [\-q|\-\-quiet]
++        [\-e|\-\-execute PROGRAM]
++        [\-p|\-\-pid PID]
+ 
+ .SH DESCRIPTION
+ Anomaly can detect anomalous data in a numeric stream.  In order to do this,
+@@ -31,7 +31,7 @@
+ We can extract the 5-minute load (the second of the three numbers) using this:
+ 
+ .RS
+-$ uptime | cut -f 13 -d ' '
++$ uptime | cut \-f 13 \-d ' '
+ .br
+ 0.29
+ .RE
+@@ -39,7 +39,7 @@
+ That number can be extracted once a minute, using this:
+ 
+ .RS
+-$ while [ 1 ]; do uptime | cut -f 13 -d ' '; sleep 60; done
++$ while [ 1 ]; do uptime | cut \-f 13 \-d ' '; sleep 60; done
+ .br
+ 0.29
+ .br
+@@ -61,22 +61,22 @@
+ .SH DETECTION - THRESHOLD
+ The simplest detection method is threshold, which compares the data to an
+ absolute value.  This method can use a minimum and a maximum value for
+-comparison.  These alternatives are all valid, and make use of --min, --max or
++comparison.  These alternatives are all valid, and make use of \-\-min, \-\-max or
+ both:
+ 
+ .RS
+-anomaly --threshold --min 1.22 --max 9.75
++anomaly \-\-threshold \-\-min 1.22 \-\-max 9.75
+ .br
+-anomaly --threshold --min 1.22
++anomaly \-\-threshold \-\-min 1.22
+ .br
+-anomaly --threshold --max 9.75
++anomaly \-\-threshold \-\-max 9.75
+ .RE
+ 
+ In the following example, the values '1' and '10' would be detected as
+ anomalies:
+ 
+ .RS
+-$ echo 2 1 3 6 10 5 | anomaly --threshold --min 1.5 --max 8
++$ echo 2 1 3 6 10 5 | anomaly \-\-threshold \-\-min 1.5 \-\-max 8
+ .br
+ Anomalous data detected.  The value 1 is below the minimum of 1.5.
+ .br
+@@ -92,14 +92,14 @@
+ This makes the monitoring somewhat adaptive.  Here is an example:
+ 
+ .RS
+-anomaly --stddev --sample 20
++anomaly \-\-stddev \-\-sample 20
+ .RE
+ 
+ This uses a sample size of the 20 most recent values, and will detect any values
+ that are +/- 1 standard deviation from the mean.  An example:
+ 
+ .RS
+-$ echo 1 2 3 4 5 6 | anomaly --stddev --sample 5
++$ echo 1 2 3 4 5 6 | anomaly \-\-stddev \-\-sample 5
+ .br
+ Anomalous data detected.  The value 6 is more than 1 sigma(s)
+ above the mean value 3, with a sample size of 5.
+@@ -114,13 +114,13 @@
+ (as above) but can be overridden:
+ 
+ .RS
+-$ echo 1 2 3 4 5 6 | anomaly --stddev --sample 5 --coefficient 1.9
++$ echo 1 2 3 4 5 6 | anomaly \-\-stddev \-\-sample 5 \-\-coefficient 1.9
+ .br
+ $
+ .RE
+ 
+ In this example, the 6th value is not considered an anomaly because it is within
+-the range (3 +/- (1.9 * 1.58)), which is between -0.002 and 6.002.
++the range (3 +/\- (1.9 * 1.58)), which is between \-0.002 and 6.002.
+ 
+ .SH RESPONSE - MESSAGE
+ The message response is the default, and consists of a single line of printed
+@@ -128,7 +128,7 @@
+ is an example:
+ 
+ .RS
+-$ echo 1 2 3 | anomaly --threshold --max 2.5
++$ echo 1 2 3 | anomaly \-\-threshold \-\-max 2.5
+ .br
+ Anomalous data detected.  The value 3 is above the maximum of 2.5.
+ .RE
+@@ -137,7 +137,7 @@
+ there is some kind of response:
+ 
+ .RS
+-$ echo 1 2 3 | anomaly --threshold --max 2.5 --quiet ...
++$ echo 1 2 3 | anomaly \-\-threshold \-\-max 2.5 \-\-quiet ...
+ .RE
+ 
+ .SH RESPONSE - EXECUTE
+@@ -145,7 +145,7 @@
+ the 'date' command, but any program can be used:
+ 
+ .RS
+-$ echo 1 2 3 | anomaly --threshold --max 2.5 --quiet --execute '/bin/date +%s'
++$ echo 1 2 3 | anomaly \-\-threshold \-\-max 2.5 \-\-quiet \-\-execute '/bin/date +%s'
+ .br
+ 1361727327
+ .RE
+@@ -154,7 +154,7 @@
+ Anomaly can send a USR1 signal to a program in response to detection:
+ 
+ .RS
+-$ echo 1 2 3 | anomaly --threshold --max 2.5 --quiet --pid 12345
++$ echo 1 2 3 | anomaly \-\-threshold \-\-max 2.5 \-\-quiet \-\-pid 12345
+ .RE
+ 
+ This sends the USR1 signal to the process with PID 12345.  The receiving program
