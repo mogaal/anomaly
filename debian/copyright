@@ -3,8 +3,7 @@ Upstream-Name: anomaly
 Source: http://tasktools.org/projects/anomaly/
 
 Files: *
-Copyright: 2010-2012, Paul Beckingham <paul@beckingham.net>
-           2010-2012, Federico Hernandez <ultrafredde@gmail.com>
+Copyright: 2013, Göteborg Bit Factory.
 License: MIT
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
