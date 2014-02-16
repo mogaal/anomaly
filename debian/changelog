@@ -1,3 +1,11 @@
+anomaly (1.1.0-2) unstable; urgency=medium
+
+  * d/control: 
+    - Fix ustream homepage URL (Closes: #738769).
+    - Push to 3.9.5 Standards-Version field.
+
+ -- Alejandro Garrido Mota <alejandro@debian.org>  Sun, 16 Feb 2014 11:55:43 -0430
+
 anomaly (1.1.0-1) unstable; urgency=low
 
   * Initial release (Closes: #721646). 
