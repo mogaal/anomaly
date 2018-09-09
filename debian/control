@@ -5,7 +5,7 @@ Maintainer: Alejandro Garrido Mota <alejandro@debian.org>
 Build-Depends: debhelper (>= 9), cmake
 Standards-Version: 3.9.5
 Homepage: http://tasktools.org/projects/anomaly.html
-Vcs-Git: git://github.com/mogaal/anomaly.git
+Vcs-Git: https://github.com/mogaal/anomaly.git
 Vcs-Browser: https://github.com/mogaal/anomaly
 
 Package: anomaly
