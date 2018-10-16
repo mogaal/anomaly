@@ -2,6 +2,7 @@ anomaly (1.1.0-4) UNRELEASED; urgency=medium
 
   * Use secure copyright file specification URI.
   * Trim trailing whitespace.
+  * Use secure URI in Vcs control header.
 
  -- Jelmer Vernooĳ <jelmer@debian.org>  Tue, 16 Oct 2018 20:11:12 +0000
 
