@@ -1,3 +1,9 @@
+anomaly (1.1.0-4) UNRELEASED; urgency=medium
+
+  * Use secure copyright file specification URI.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Tue, 16 Oct 2018 20:11:12 +0000
+
 anomaly (1.1.0-3) unstable; urgency=medium
 
   * Fix missing comma in package description. Thanks to Pascal De Vuyst.
