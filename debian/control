@@ -13,6 +13,6 @@ Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: detect anomalous data in a numeric stream
  To detect anomalous data in a numeric stream, anomaly needs to see
- a stream of numeric data and apply one of its detection methods. 
+ a stream of numeric data and apply one of its detection methods.
  If an anomaly is detected, a response is made, chosen from one or
  more built in methods.

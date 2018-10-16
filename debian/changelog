@@ -1,6 +1,7 @@
 anomaly (1.1.0-4) UNRELEASED; urgency=medium
 
   * Use secure copyright file specification URI.
+  * Trim trailing whitespace.
 
  -- Jelmer Vernooĳ <jelmer@debian.org>  Tue, 16 Oct 2018 20:11:12 +0000
 
@@ -13,7 +14,7 @@ anomaly (1.1.0-3) unstable; urgency=medium
 
 anomaly (1.1.0-2) unstable; urgency=medium
 
-  * d/control: 
+  * d/control:
     - Fix ustream homepage URL (Closes: #738769).
     - Push to 3.9.5 Standards-Version field.
 
@@ -21,6 +22,6 @@ anomaly (1.1.0-2) unstable; urgency=medium
 
 anomaly (1.1.0-1) unstable; urgency=low
 
-  * Initial release (Closes: #721646). 
+  * Initial release (Closes: #721646).
 
  -- Alejandro Garrido Mota <alejandro@debian.org>  Mon, 02 Sep 2013 22:42:34 +0200
