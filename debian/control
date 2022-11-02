@@ -2,7 +2,7 @@ Source: anomaly
 Section: utils
 Priority: extra
 Maintainer: Alejandro Garrido Mota <alejandro@debian.org>
-Build-Depends: debhelper (>= 9), cmake
+Build-Depends: debhelper (>= 13~), cmake
 Standards-Version: 3.9.5
 Homepage: http://tasktools.org/projects/anomaly.html
 Vcs-Git: git://github.com/mogaal/anomaly.git
