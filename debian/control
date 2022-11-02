@@ -1,6 +1,6 @@
 Source: anomaly
 Section: utils
-Priority: extra
+Priority: optional
 Maintainer: Alejandro Garrido Mota <alejandro@debian.org>
 Build-Depends: debhelper-compat (= 13), cmake
 Standards-Version: 3.9.5
