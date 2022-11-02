@@ -3,12 +3,10 @@ PACKAGE = $(shell dh_listpackages)
 TMP     = $(CURDIR)/debian/$(PACKAGE)
 
 %:
-	dh $@ 
+	dh $@
 
 override_dh_auto_install:
 	cp $(CURDIR)/doc/man/anomaly.1.in debian/anomaly.1
 	dh_auto_install
 	rm -f $(TMP)/usr/share/doc/anomaly/COPYING \
 		$(TMP)/usr/share/doc/anomaly/INSTALL
-
-
