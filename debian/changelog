@@ -1,3 +1,15 @@
+anomaly (1.1.0-4) UNRELEASED; urgency=medium
+
+  * Trim trailing whitespace.
+  * Use secure copyright file specification URI.
+  * Update watch file format version to 4.
+  * Bump debhelper from deprecated 9 to 13.
+  * Set debhelper-compat version in Build-Depends.
+  * Change priority extra to priority optional.
+  * Use secure URI in Vcs control header Vcs-Git.
+
+ -- Debian Janitor <janitor@jelmer.uk>  Wed, 02 Nov 2022 01:14:54 -0000
+
 anomaly (1.1.0-3) unstable; urgency=medium
 
   * Fix missing comma in package description. Thanks to Pascal De Vuyst.
@@ -7,7 +19,7 @@ anomaly (1.1.0-3) unstable; urgency=medium
 
 anomaly (1.1.0-2) unstable; urgency=medium
 
-  * d/control: 
+  * d/control:
     - Fix ustream homepage URL (Closes: #738769).
     - Push to 3.9.5 Standards-Version field.
 
@@ -15,6 +27,6 @@ anomaly (1.1.0-2) unstable; urgency=medium
 
 anomaly (1.1.0-1) unstable; urgency=low
 
-  * Initial release (Closes: #721646). 
+  * Initial release (Closes: #721646).
 
  -- Alejandro Garrido Mota <alejandro@debian.org>  Mon, 02 Sep 2013 22:42:34 +0200
